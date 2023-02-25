@@ -45,3 +45,10 @@ def showVideoWithChangedDimensions(video_path, size_ratio=0.75):
     except cv.error:
         capture.release()
         cv.destroyAllWindows()
+
+
+def showImageChangedDimensions(image_path, size_ratio=0.75):
+    img = cv.imread(image_path)
+    changed_image = rescale.rescaleFrame(img, size_ratio)
+    cv.imshow("Reduced " + image_path.split('/')[-1], changed_image)
+    cv.waitKey(0)
