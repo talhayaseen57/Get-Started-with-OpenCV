@@ -1,4 +1,11 @@
-import read
+import cv2 as cv
 
-image_path = "Photos/cat_large2.jpg"
-video_path = "Videos/dog.mp4"
+import show
+
+image = "Photos/cat.jpg"
+video = "Videos/dog.mp4"
+none_obj = None
+
+# show.showImage(image)
+show.showVideo(video)
+show.showVideoWithChangedDimensions(video)
